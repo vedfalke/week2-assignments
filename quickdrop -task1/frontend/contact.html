@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickDrop - simple and fast delivery">
+  <title>Contact | QuickDrop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="contact">
+  <header class="navbar glass">
+    <a href="index.html" class="logo">📦 QuickDrop</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav id="navLinks" class="nav-links">
+      <a href="index.html" data-p="index">Home</a>
+      <a href="about.html" data-p="about">About</a>
+      <a href="services.html" data-p="services">Services</a>
+      <a href="contact.html" data-p="contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section page-title">
+      <h1>Contact us</h1>
+      <p>Questions? Send us a message.</p>
+    </section>
+
+    <section class="section">
+      <div class="glass form-box">
+        <form id="contactForm" novalidate>
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name">
+          <small class="error" id="nameError"></small>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@example.com">
+          <small class="error" id="emailError"></small>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="How can we help?"></textarea>
+          <small class="error" id="messageError"></small>
+
+          <button type="submit" class="btn">Send message</button>
+          <p id="formSuccess" class="success"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer glass">
+    <div class="footer-grid">
+      <div>
+        <h3>📦 QuickDrop</h3>
+        <p>Fast, friendly delivery for everyday things.</p>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Follow us</h4>
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Twitter">x</a>
+        </div>
+      </div>
+    </div>
+    <p class="copy">© 2026 QuickDrop. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

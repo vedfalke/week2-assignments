@@ -1,0 +1,77 @@
+{
+  "info": {
+    "name": "Employee Management API",
+    "description": "Basic CRUD API tests for the Employee Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000"
+    },
+    {
+      "key": "employeeId",
+      "value": "REPLACE_WITH_EMPLOYEE_ID"
+    }
+  ],
+  "item": [
+    {
+      "name": "Create Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Asha Patil\",\n  \"department\": \"HR\",\n  \"role\": \"HR Executive\",\n  \"salary\": 35000,\n  \"joinDate\": \"2026-01-15\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{baseUrl}}/api/employees"
+      }
+    },
+    {
+      "name": "Get All Employees",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/employees"
+      }
+    },
+    {
+      "name": "Update Employee",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Asha Patil\",\n  \"department\": \"Human Resources\",\n  \"role\": \"Senior HR Executive\",\n  \"salary\": 42000,\n  \"joinDate\": \"2026-01-15\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{baseUrl}}/api/employees/{{employeeId}}"
+      }
+    },
+    {
+      "name": "Delete Employee",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/employees/{{employeeId}}"
+      }
+    }
+  ]
+}
